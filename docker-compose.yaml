@@ -1,0 +1,24 @@
+version: '3.9'
+
+# Services
+services:
+
+  # Nginx Service
+  nginx:
+    image: nginx:1.23
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+
+  # App Service
+  php:
+    build: 
+      context: ./php
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+
