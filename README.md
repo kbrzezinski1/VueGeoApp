@@ -1,5 +1,6 @@
 # VueGeoApp
 This project requires Docker and Composer to be installed.
+Add the following entry to your hosts file: 127.0.0.1 vuegeo.test
 
 1. Clone the repository to your local machine: git clone https://github.com/kbrzezinski1/VueGeoApp.git
 2. Change into the project directory: cd VueGeoApp
